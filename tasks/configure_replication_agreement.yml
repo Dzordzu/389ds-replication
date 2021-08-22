@@ -48,12 +48,12 @@
     state: exact
     attributes:
       nsds5replicaport: "{{ '389' if not dirsrv_consumer_uri|urlsplit('port') else dirsrv_consumer_uri|urlsplit('port') }}"
-      nsds5ReplicaBindDN: cn={{ dirsrv_replication_user_remote | default(dirsrv_replication_user) }},cn=config
-      nsds5replicabindmethod: {{ dirsrv_replica_bind_method }}
-      nsds5replicaroot: {{ dirsrv_suffix }}
-      description: Agreement between this server (supplier) and {{ dirsrv_consumer_uri }} (consumer). Managed by Ansible.
-      nsds5replicatedattributelist: {{ dirsrv_replica_attributes_list }}
-      nsds5ReplicatedAttributeListTotal: {{ dirsrv_replica_attributes_list_total }}
+      nsds5ReplicaBindDN: "cn={{ dirsrv_replication_user_remote | default(dirsrv_replication_user) }},cn=config"
+      nsds5replicabindmethod: "{{ dirsrv_replica_bind_method }}"
+      nsds5replicaroot: "{{ dirsrv_suffix }}"
+      description: "Agreement between this server (supplier) and {{ dirsrv_consumer_uri }} (consumer). Managed by Ansible."
+      nsds5replicatedattributelist: "{{ dirsrv_replica_attributes_list }}"
+      nsds5ReplicatedAttributeListTotal: "{{ dirsrv_replica_attributes_list_total }}"
 
 # The exact same as above, but with "changed_when: false" because that "changed" annoyed me.
 # The downside is that if password actually changes, you'll see that nothing has changed according to Ansible, but it did work.

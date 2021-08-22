@@ -29,5 +29,5 @@
     dn: "cn={{ dirsrv_replication_user }},cn=config"
     state: exact
     attributes:
-      userPassword: {{ dirsrv_replication_user_password }}
+      userPassword: "{{ dirsrv_replication_user_password }}"
   changed_when: false  # Password always changes, but doesn't really change

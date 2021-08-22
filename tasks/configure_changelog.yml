@@ -27,5 +27,5 @@
     dn: "cn=changelog5,cn=config"
     state: exact
     attributes:
-      nsslapd-changelogdir: /var/lib/dirsrv/slapd-{{ dirsrv_serverid }}/changelogdb
-      nsslapd-changelogmaxage: {{ dirsrv_changelog_max_age }}
+      nsslapd-changelogdir: "/var/lib/dirsrv/slapd-{{ dirsrv_serverid }}/changelogdb"
+      nsslapd-changelogmaxage: "{{ dirsrv_changelog_max_age }}"
