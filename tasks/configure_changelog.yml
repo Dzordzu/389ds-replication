@@ -14,7 +14,7 @@
       cn: "changelog5"
       # Fails if this is not set, although it's not a MUST attribute
       # (but there's dark magic taking place with extensibleObject)
-      nsslapd-changelogdir: "/var/lib/dirsrv/slapd-{{ dirsrv_serverid }}/changelogdb"
+      # nsslapd-changelogdir: "/var/lib/dirsrv/slapd-{{ dirsrv_serverid }}/changelogdb"
     state: present
 
 - name: Configure changelog
